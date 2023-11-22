@@ -1,0 +1,56 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>NEKO MOVIES</title>
+</head>
+<body class="bg-black">
+<main class="container-fluid bg-white">
+    <!--NavBar-->
+
+    <nav class="row justify-content-md-center bg-warning text-center text-white"
+         th:include="components/nav/Navbar :: nav(routesNav=${routesNav})"></nav>
+
+    <!--Header-->
+    <section class="row-fluid mb-2">
+
+        <img style="width: 100%; height: 60vh;"
+             src="https://i.postimg.cc/Ss3tSDzT/nekomoviess.png"
+             class=" object-fit-cover">
+
+    </section>
+
+    <div class="card mb-2 p-3">
+        <div class="row g-2 justify-content-center" >
+            <h3 class="text-center font-italic">Promociones</h3>
+            <div class="col-md-4">
+                <img src="https://img.freepik.com/fotos-premium/personaje-comic-vengadores_905510-17805.jpg?w=360"
+                     class="img-fluid rounded-start" style="height: 300px;">
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title">Batman</h5>
+                    <p class="card-text">
+                        Pelicula en estreno
+                        <span class="text-muted">
+                            50%
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-warning d-block ml-auto">Ver más promos</a>
+        </div>
+
+    </div>
+    <footer class="row justify-content-md-center bg-warning text-center text-white" th:include="components/footer/Footer :: footer"></footer>
+</main>
+</body>
+</html>

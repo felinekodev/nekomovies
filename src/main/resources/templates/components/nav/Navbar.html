@@ -1,0 +1,18 @@
+<link href="/css/styles.css" rel="stylesheet">
+<nav class="row justify-content-md-center text-center text-white">
+    <!--Logo-->
+    <section class="col col-md-2 justify-content-center p-3">
+        <h2 class="fs-3 fw-bolder">
+            <a href="/">
+                
+          NEKO MOVIES
+            </a>
+        </h2>
+    </section>
+    <!--Links-->
+    <section class="col d-flex flex-column text-white flex-md-row gap-2 justify-content-center align-items-center p-3" th:each="link : ${routesNav}">
+        <a th:text="${link.name}" th:href="@{${link.route}}" class="text-decoration-none font-weight-bold text-primary text-"></a>
+    </section>
+    <!--profile-->
+    <section class="col col-md-2 justify-content-center p-3"><a>Perfil</a></section>
+</nav>
